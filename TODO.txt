@@ -1,0 +1,9 @@
+Things to do:
+1. Create a link button to a random wikipedia article.
+2. Create an input field for an item to be searched.
+3. Create a submit button that will trigger a function to get the searched item.
+4. Create an output field that will print the list of articles that match the searched item.
+5. Use the URL for the wikipedia search and incorporate the "search item".
+6. Use the $get.JSON query to get the required data.
+7. Arrange properly the lists of items generated.
+8. Provide a link for each item generated.
