@@ -22,6 +22,26 @@
 	    </p>	    
 	    
 	</div>
-
+	 
+    <script>
+        $(document).ready(function(){
+	    $("#searchItemButton").on("click", function(){
+                var searchItem = $("#searchItem").val();
+		var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchItem + "&format=json&callback=?";
+		    
+                $.getJSON(url, function(data){
+		    $("#output").html("");
+	            for (var i = 0; i < data[1].length; i++) {
+		        $("#output").append("<ul><a href=" + data[3][i] + " target='_blank'>" + data[1][i] + "</a><br>" + data[2][i] + "</ul>");
+		    }
+			
+	            if (data[1].length < 1) {
+		        $("#output").html("No match for item");
+		    }		
+		});
+	    });
+	});
+	
+    </script>      
   </body>
 </html>
